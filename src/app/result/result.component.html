@@ -2,8 +2,8 @@
 <div class="row" *ngIf="weatherData">
   Forecast for {{ weatherData.city.name }}
   <hr />
-  <div *ngFor="let w of weatherData.list">
-    <div class="row">
+  <div *ngFor="let w of weatherData.list; let i= index">
+    <div *ngIf="i<5" class="row">
       <div class="col-md-12">
         <div class="panel panel-default">
           <div class="panel-heading">
