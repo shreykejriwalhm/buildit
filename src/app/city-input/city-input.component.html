@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h4>Forecast by City</h4>
+    <form #f="ngForm" (ngSubmit)="getForecast(f)">
+      <div class="form-group">
+        <input type="text" name="location" ngModel class="form-control" required />
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Get Forecast</button>
+    </form>
+  </div>
+</div>

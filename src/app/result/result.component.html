@@ -1,0 +1,19 @@
+<hr />
+<div class="row" *ngIf="weatherData">
+  Forecast for {{ weatherData.city.name }}
+  <hr />
+  <div *ngFor="let w of weatherData.list">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">{{ convertToDate( w.dt ) | date: 'mediumDate' }}</h3>
+          </div>
+          <div class="panel-body">
+            Daytime temperature: {{ convertToStandard(w.temp.day) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
